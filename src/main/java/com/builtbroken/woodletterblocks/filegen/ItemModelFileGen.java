@@ -11,26 +11,26 @@ import com.builtbroken.woodletterblocks.Type;
 
 public class ItemModelFileGen
 {
-	public static void main(String[] args) throws IOException
-	{
-		for(Type.Color color : Type.Color.values())
-		{
-			for(Type.Wood wood : Type.Wood.values())
-			{
-				for(Type.Letter letter : Type.Letter.values())
-				{
-					String w = wood.name().toLowerCase();
-					String l = letter.name().toLowerCase();
-					String c = color.name().toLowerCase();
-					String name = c + "_" + w + "_" + l;
-					List<String> content = new ArrayList<>();
+    public static void main(String[] args) throws IOException
+    {
+        for(Type.Color color : Type.Color.values())
+        {
+            for(Type.Wood wood : Type.Wood.values())
+            {
+                for(Type.Letter letter : Type.Letter.values())
+                {
+                    String w = wood.name().toLowerCase();
+                    String l = letter.name().toLowerCase();
+                    String c = color.name().toLowerCase();
+                    String name = c + "_" + w + "_" + l;
+                    List<String> content = new ArrayList<>();
 
-					content.add("{");
-					content.add("	\"parent\": \"woodletterblocks:block/" + c + "_" + w + "_" + l + "\"");
-					content.add("}");
-					FileUtils.writeLines(new File(System.getProperty("user.home") + "/Downloads/generated/models/item/" + name + ".json"), content);
-				}
-			}
-		}
-	}
+                    content.add("{");
+                    content.add("	\"parent\": \"woodletterblocks:block/" + c + "_" + w + "_" + l + "\"");
+                    content.add("}");
+                    FileUtils.writeLines(new File(System.getProperty("user.home") + "/Downloads/generated/models/item/" + name + ".json"), content);
+                }
+            }
+        }
+    }
 }

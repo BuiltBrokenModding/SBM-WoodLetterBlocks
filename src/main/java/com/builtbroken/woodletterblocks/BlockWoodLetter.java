@@ -10,20 +10,20 @@ import net.minecraft.state.StateContainer.Builder;
 
 public class BlockWoodLetter extends BlockHorizontal
 {
-	public BlockWoodLetter()
-	{
-		super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.0F, 3.0F));
-	}
+    public BlockWoodLetter()
+    {
+        super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.0F, 3.0F));
+    }
 
-	@Override
-	public IBlockState getStateForPlacement(BlockItemUseContext context)
-	{
-		return getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing());
-	}
+    @Override
+    public IBlockState getStateForPlacement(BlockItemUseContext context)
+    {
+        return getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing());
+    }
 
-	@Override
-	protected void fillStateContainer(Builder<Block, IBlockState> builder)
-	{
-		builder.add(HORIZONTAL_FACING);
-	}
+    @Override
+    protected void fillStateContainer(Builder<Block, IBlockState> builder)
+    {
+        builder.add(HORIZONTAL_FACING);
+    }
 }

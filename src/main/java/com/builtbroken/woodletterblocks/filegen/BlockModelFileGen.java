@@ -11,31 +11,31 @@ import com.builtbroken.woodletterblocks.Type;
 
 public class BlockModelFileGen
 {
-	public static void main(String[] args) throws IOException
-	{
-		for(Type.Color color : Type.Color.values())
-		{
-			for(Type.Wood wood : Type.Wood.values())
-			{
-				for(Type.Letter letter : Type.Letter.values())
-				{
-					String w = wood.name().toLowerCase();
-					String l = letter.name().toLowerCase();
-					String c = color.name().toLowerCase();
-					String name = c + "_" + w + "_" + l;
-					List<String> content = new ArrayList<>();
+    public static void main(String[] args) throws IOException
+    {
+        for(Type.Color color : Type.Color.values())
+        {
+            for(Type.Wood wood : Type.Wood.values())
+            {
+                for(Type.Letter letter : Type.Letter.values())
+                {
+                    String w = wood.name().toLowerCase();
+                    String l = letter.name().toLowerCase();
+                    String c = color.name().toLowerCase();
+                    String name = c + "_" + w + "_" + l;
+                    List<String> content = new ArrayList<>();
 
-					content.add("{");
-					content.add("	\"parent\": \"woodletterblocks:block/" + l + "\",");
-					content.add("	\"textures\": {");
-					content.add("		\"0\": \"block/" + w + "_planks\",");
-					content.add("		\"1\": \"block/" + c + "_wool\",");
-					content.add("		\"particle\": \"block/" + w + "_planks\"");
-					content.add("	}");
-					content.add("}");
-					FileUtils.writeLines(new File(System.getProperty("user.home") + "/Downloads/generated/models/block/" + name + ".json"), content);
-				}
-			}
-		}
-	}
+                    content.add("{");
+                    content.add("	\"parent\": \"woodletterblocks:block/" + l + "\",");
+                    content.add("	\"textures\": {");
+                    content.add("		\"0\": \"block/" + w + "_planks\",");
+                    content.add("		\"1\": \"block/" + c + "_wool\",");
+                    content.add("		\"particle\": \"block/" + w + "_planks\"");
+                    content.add("	}");
+                    content.add("}");
+                    FileUtils.writeLines(new File(System.getProperty("user.home") + "/Downloads/generated/models/block/" + name + ".json"), content);
+                }
+            }
+        }
+    }
 }
