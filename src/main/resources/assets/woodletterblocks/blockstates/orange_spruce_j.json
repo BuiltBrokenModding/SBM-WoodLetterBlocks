@@ -1,0 +1,8 @@
+{
+	"variants": {
+        "facing=south": { "model": "woodletterblocks:block/orange_spruce_j"},
+        "facing=west": { "model": "woodletterblocks:block/orange_spruce_j", "y": 90 },
+        "facing=north": { "model": "woodletterblocks:block/orange_spruce_j", "y": 180 },
+        "facing=east": { "model": "woodletterblocks:block/orange_spruce_j", "y": 270 }
+	}
+}

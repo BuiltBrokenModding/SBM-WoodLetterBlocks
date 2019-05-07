@@ -1,0 +1,25 @@
+modLoader="javafml" #mandatory
+loaderVersion="[25,)" #mandatory
+
+[[mods]] #mandatory
+	modId="woodletterblocks" #mandatory
+	version="v1.0" #mandatory
+	displayName="[SBM] Wood Letter Blocks" #mandatory
+	description='''Adds wooden letter blocks in different colors.''' #mandatory
+	issueTrackerURL=""
+	displayURL=""
+	authors="bl4ckscor3"
+
+[[dependencies.woodletterblocks]]
+    modId="forge"
+    mandatory=true
+    versionRange="[25,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.woodletterblocks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.13.2]"
+    ordering="NONE"
+    side="BOTH"
