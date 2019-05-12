@@ -4,3 +4,8 @@
 /.classpath
 /.gradle
 /.settings
+out/
+
+\.idea/
+
+run/
