@@ -11,42 +11,53 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '1.13.2-v1.0'
+version = '1.13.2-0.0.1'
 group = 'com.builtbroken.woodletterblocks'
 archivesBaseName = 'woodletterblocks'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'stable', version: '20190406-1.13.2'
+    mappings channel: 'snapshot', version: '20190510-1.13.2'
 	
     runs {
-        client = {
-            properties 'forge.logging.markers': 'SCAN,REGISTRIES,REGISTRYDUMP'
-            properties 'forge.logging.console.level': 'debug'
-            workingDirectory project.file('run').canonicalPath
-            source sourceSets.main
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
-        server = {
-            properties 'forge.logging.markers': 'SCAN,REGISTRIES,REGISTRYDUMP'
-            properties 'forge.logging.console.level': 'debug'
-            workingDirectory project.file('run').canonicalPath
-            source sourceSets.main
+
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
     }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.13.2-25.0.149'
+    minecraft 'net.minecraftforge:forge:1.13.2-25.0.193'
 }
 
 jar {
     manifest {
         attributes(["Specification-Title": "[SBM] Wood Letter Blocks",
                     "Specification-Vendor": "bl4ckscor3",
-                    "Specification-Version": "v1.0",
+                    "Specification-Version": "0.0.1",
                     "Implementation-Title": "[SBM] Wood Letter Blocks",
-                    "Implementation-Version": "v1.0",
+                    "Implementation-Version": "0.0.1",
                     "Implementation-Vendor" :"bl4ckscor3",
                     "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")],)
     }

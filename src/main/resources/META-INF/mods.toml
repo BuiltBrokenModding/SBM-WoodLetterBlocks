@@ -3,9 +3,9 @@ loaderVersion="[25,)" #mandatory
 
 [[mods]] #mandatory
 	modId="woodletterblocks" #mandatory
-	version="v1.0" #mandatory
+	version="0.0.1" #mandatory
 	displayName="[SBM] Wood Letter Blocks" #mandatory
-	description='''Adds wooden letter blocks in different colors.''' #mandatory
+	description='''Adds wooden letter blocks in different colors and wood types.''' #mandatory
 	issueTrackerURL=""
 	displayURL=""
 	authors="bl4ckscor3"
