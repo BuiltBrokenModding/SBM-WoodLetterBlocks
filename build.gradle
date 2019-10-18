@@ -17,11 +17,11 @@ archivesBaseName = 'woodenletterblocks'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
-//exclude files that are only used to generate the assets from the built jar
 sourceSets {
     main {
         java {
-            exclude 'bl4ckscor3/mod/woodenletterblocks/gen/**'
+            exclude 'bl4ckscor3/mod/woodenletterblocks/gen/**' //exclude files that are only used to generate the assets from the built jar
+            srcDirs += "src/generated/resources"
         }
     }
 }
@@ -49,6 +49,18 @@ minecraft {
 
             mods {
                 examplemod {
+                    source sourceSets.main
+                }
+            }
+        }
+        
+        data {
+            workingDirectory project.file('run')
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'woodenletterblocks', '--all', '--output', file('src/generated/resources/')
+
+            mods {
+                woodenletterblocks {
                     source sourceSets.main
                 }
             }
