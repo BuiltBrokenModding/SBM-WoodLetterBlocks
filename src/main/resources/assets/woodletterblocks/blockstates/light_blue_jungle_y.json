@@ -1,8 +1,0 @@
-{
-	"variants": {
-        "facing=south": { "model": "woodletterblocks:block/light_blue_jungle_y"},
-        "facing=west": { "model": "woodletterblocks:block/light_blue_jungle_y", "y": 90 },
-        "facing=north": { "model": "woodletterblocks:block/light_blue_jungle_y", "y": 180 },
-        "facing=east": { "model": "woodletterblocks:block/light_blue_jungle_y", "y": 270 }
-	}
-}

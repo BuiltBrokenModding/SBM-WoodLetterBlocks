@@ -1,8 +1,0 @@
-{
-	"parent": "woodletterblocks:block/i",
-	"textures": {
-		"0": "block/oak_planks",
-		"1": "block/magenta_wool",
-		"particle": "block/oak_planks"
-	}
-}
