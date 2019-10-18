@@ -1,4 +1,4 @@
-package bl4ckscor3.mod.woodenletterblocks.filegen;
+package bl4ckscor3.mod.woodenletterblocks.gen.asset;
 
 import java.io.IOException;
 
@@ -12,19 +12,19 @@ public class AssetGenerator
 
 			long then = System.currentTimeMillis();
 
-			BlockModelFileGen.generate();
+			BlockModelGenerator.generate();
 			System.out.println("Block model file gen took " + (System.currentTimeMillis() - then) + "ms");
 			then = System.currentTimeMillis();
 
-			BlockStateFileGen.generate();
+			BlockStateGenerator.generate();
 			System.out.println("Block state file gen took " + (System.currentTimeMillis() - then) + "ms");
 			then = System.currentTimeMillis();
 
-			EnUsLangFileGen.generate();
+			EnUsLangGenerator.generate();
 			System.out.println("en_us language file gen took " + (System.currentTimeMillis() - then) + "ms");
 			then = System.currentTimeMillis();
 
-			ItemModelFileGen.generate();
+			ItemModelGenerator.generate();
 			System.out.println("Item model file gen took " + (System.currentTimeMillis() - then) + "ms");
 			System.out.println("Done!");
 		}

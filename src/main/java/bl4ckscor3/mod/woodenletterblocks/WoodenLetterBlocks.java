@@ -3,12 +3,12 @@ package bl4ckscor3.mod.woodenletterblocks;
 import java.util.ArrayList;
 import java.util.List;
 
+import bl4ckscor3.mod.woodenletterblocks.block.WoodenLetterBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,20 +35,13 @@ public class WoodenLetterBlocks
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event)
 	{
-		for(Type.Color color : Type.Color.values())
-		{
-			for(Type.Wood wood : Type.Wood.values())
-			{
-				for(Type.Letter letter : Type.Letter.values())
-				{
-					//registry name is <color>_<wood>_<letter>
-					Block block = new WoodenLetterBlock().setRegistryName(new ResourceLocation(MODID, color.name().toLowerCase() + "_" + wood.name().toLowerCase() + "_" + letter.name().toLowerCase()));
+		Type.forEach((color, wood, letter) -> {
+			//registry name is <color>_<wood>_<letter>
+			Block block = new WoodenLetterBlock().setRegistryName(Type.getRegistryNameForType(color, wood, letter));
 
-					itemBlocksToRegister.add(new BlockItem(block, new Item.Properties().group(WOODEN_LETTER_BLOCKS_GROUP)).setRegistryName(block.getRegistryName()));
-					event.getRegistry().register(block);
-				}
-			}
-		}
+			itemBlocksToRegister.add(new BlockItem(block, new Item.Properties().group(WOODEN_LETTER_BLOCKS_GROUP)).setRegistryName(block.getRegistryName()));
+			event.getRegistry().register(block);
+		});
 	}
 
 	@SubscribeEvent

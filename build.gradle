@@ -21,7 +21,7 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 sourceSets {
     main {
         java {
-            exclude 'bl4ckscor3/mod/woodenletterblocks/filegen/**'
+            exclude 'bl4ckscor3/mod/woodenletterblocks/gen/**'
         }
     }
 }
