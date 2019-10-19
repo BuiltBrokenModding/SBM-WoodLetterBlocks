@@ -2,6 +2,8 @@ package bl4ckscor3.mod.woodenletterblocks;
 
 import org.apache.logging.log4j.util.TriConsumer;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 
 public class Type
@@ -11,7 +13,29 @@ public class Type
 	 */
 	public static enum Color
 	{
-		WHITE, ORANGE, MAGENTA, LIGHT_BLUE, YELLOW, LIME, PINK, GRAY, LIGHT_GRAY, CYAN, PURPLE, BLUE, BROWN, GREEN, RED, BLACK;
+		WHITE(Blocks.WHITE_WOOL),
+		ORANGE(Blocks.ORANGE_WOOL),
+		MAGENTA(Blocks.MAGENTA_WOOL),
+		LIGHT_BLUE(Blocks.LIGHT_BLUE_WOOL),
+		YELLOW(Blocks.YELLOW_WOOL),
+		LIME(Blocks.LIME_WOOL),
+		PINK(Blocks.PINK_WOOL),
+		GRAY(Blocks.GRAY_WOOL),
+		LIGHT_GRAY(Blocks.LIGHT_GRAY_WOOL),
+		CYAN(Blocks.CYAN_WOOL),
+		PURPLE(Blocks.PURPLE_WOOL),
+		BLUE(Blocks.BLUE_WOOL),
+		BROWN(Blocks.BROWN_WOOL),
+		GREEN(Blocks.GREEN_WOOL),
+		RED(Blocks.RED_WOOL),
+		BLACK(Blocks.BLACK_WOOL);
+
+		public final Block block;
+
+		Color(Block block)
+		{
+			this.block = block;
+		}
 	}
 
 	/**
@@ -19,7 +43,19 @@ public class Type
 	 */
 	public static enum Wood
 	{
-		OAK, SPRUCE, BIRCH, JUNGLE, ACACIA, DARK_OAK;
+		OAK(Blocks.OAK_PLANKS),
+		SPRUCE(Blocks.SPRUCE_PLANKS),
+		BIRCH(Blocks.BIRCH_PLANKS),
+		JUNGLE(Blocks.JUNGLE_PLANKS),
+		ACACIA(Blocks.ACACIA_PLANKS),
+		DARK_OAK(Blocks.DARK_OAK_PLANKS);
+
+		public final Block block;
+
+		Wood(Block block)
+		{
+			this.block = block;
+		}
 	}
 
 	/**

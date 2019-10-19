@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import bl4ckscor3.mod.woodenletterblocks.Type;
+import bl4ckscor3.mod.woodenletterblocks.WoodenLetterBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
@@ -47,6 +48,8 @@ public class BlockLootTableGenerator extends LootTableProvider
 
 			lootTables.put(block, createStandardBlockLootTable(block));
 		});
+
+		lootTables.put(WoodenLetterBlocks.CREATOR_BLOCK, createStandardBlockLootTable(WoodenLetterBlocks.CREATOR_BLOCK));
 
 		for(Map.Entry<Block,LootTable.Builder> entry : lootTables.entrySet())
 		{
