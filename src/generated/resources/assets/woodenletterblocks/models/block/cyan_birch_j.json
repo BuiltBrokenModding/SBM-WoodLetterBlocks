@@ -1,0 +1,8 @@
+{
+  "parent": "woodenletterblocks:block/base/j",
+  "textures": {
+    "0": "block/birch_planks",
+    "1": "block/cyan_wool",
+    "particle": "block/birch_planks"
+  }
+}

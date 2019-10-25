@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "woodenletterblocks:block/orange_acacia_s",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "woodenletterblocks:block/orange_acacia_s"
+    },
+    "facing=west": {
+      "model": "woodenletterblocks:block/orange_acacia_s",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "woodenletterblocks:block/orange_acacia_s",
+      "y": 270
+    }
+  }
+}

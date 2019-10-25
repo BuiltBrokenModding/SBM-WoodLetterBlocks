@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "woodenletterblocks:block/blue_spruce_e",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "woodenletterblocks:block/blue_spruce_e"
+    },
+    "facing=west": {
+      "model": "woodenletterblocks:block/blue_spruce_e",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "woodenletterblocks:block/blue_spruce_e",
+      "y": 270
+    }
+  }
+}

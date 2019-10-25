@@ -1,0 +1,8 @@
+{
+  "parent": "woodenletterblocks:block/base/f",
+  "textures": {
+    "0": "block/dark_oak_planks",
+    "1": "block/orange_wool",
+    "particle": "block/dark_oak_planks"
+  }
+}

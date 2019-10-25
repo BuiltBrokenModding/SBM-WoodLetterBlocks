@@ -1,8 +1,0 @@
-{
-	"variants": {
-        "facing=south": { "model": "woodenletterblocks:block/blue_birch_s"},
-        "facing=west": { "model": "woodenletterblocks:block/blue_birch_s", "y": 90 },
-        "facing=north": { "model": "woodenletterblocks:block/blue_birch_s", "y": 180 },
-        "facing=east": { "model": "woodenletterblocks:block/blue_birch_s", "y": 270 }
-	}
-}

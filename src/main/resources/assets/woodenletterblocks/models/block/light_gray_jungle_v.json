@@ -1,8 +1,0 @@
-{
-	"parent": "woodenletterblocks:block/base/v",
-	"textures": {
-		"0": "block/jungle_planks",
-		"1": "block/light_gray_wool",
-		"particle": "block/jungle_planks"
-	}
-}

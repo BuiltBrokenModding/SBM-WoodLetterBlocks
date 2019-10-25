@@ -1,8 +1,0 @@
-{
-	"variants": {
-        "facing=south": { "model": "woodenletterblocks:block/green_acacia_a"},
-        "facing=west": { "model": "woodenletterblocks:block/green_acacia_a", "y": 90 },
-        "facing=north": { "model": "woodenletterblocks:block/green_acacia_a", "y": 180 },
-        "facing=east": { "model": "woodenletterblocks:block/green_acacia_a", "y": 270 }
-	}
-}

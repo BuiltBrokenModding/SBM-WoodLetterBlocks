@@ -13,5 +13,9 @@ public class DataGenRegistrar
 	public static void onGatherData(GatherDataEvent event)
 	{
 		event.getGenerator().addProvider(new BlockLootTableGenerator(event.getGenerator()));
+		event.getGenerator().addProvider(new BlockModelGenerator(event.getGenerator(), WoodenLetterBlocks.MODID, event.getExistingFileHelper()));
+		event.getGenerator().addProvider(new BlockStateGenerator(event.getGenerator(), WoodenLetterBlocks.MODID, event.getExistingFileHelper()));
+		event.getGenerator().addProvider(new EnUsLangGenerator(event.getGenerator(), WoodenLetterBlocks.MODID, "en_us"));
+		event.getGenerator().addProvider(new ItemModelGenerator(event.getGenerator(), WoodenLetterBlocks.MODID, event.getExistingFileHelper()));
 	}
 }
