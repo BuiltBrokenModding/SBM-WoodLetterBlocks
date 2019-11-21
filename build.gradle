@@ -21,7 +21,9 @@ sourceSets {
     main {
         java {
             exclude 'bl4ckscor3/mod/woodenletterblocks/gen/**' //exclude files that are only used to generate the assets from the built jar
-            srcDirs += "src/generated/resources"
+        }
+        resources {
+            srcDirs += "src/generated/resources" //include generated files
         }
     }
 }
